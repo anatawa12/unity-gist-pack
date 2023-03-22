@@ -1,0 +1,72 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+env:
+  PKG_NAME: com.anatawa12.gists
+
+concurrency:
+  group: publish
+  cancel-in-progress: true
+
+permissions: write-all
+
+jobs:
+  everyday-check:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.update-version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Prepare build folder
+        run: ./.github/try-update.sh
+
+      - name: Prepare build folder
+        if: ${{ env.VERSION }}
+        run: mkdir build
+
+      - name: Build VPM release
+        if: ${{ env.VERSION }}
+        run: |
+          zip -r "build/$PKG_NAME-$VERSION.zip" . -x 'build*' '.*'
+      - name: Upload VPM release
+        if: ${{ env.VERSION }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: vpm-package
+          path: build/${{ env.PKG_NAME }}-${{ env.VERSION }}.zip
+
+      - name: Publish Release
+        if: ${{ env.VERSION }}
+        run: |
+          git push && git push origin "v$VERSION"
+
+      - name: Publish release to github
+        if: ${{ env.VERSION }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          sleep 1
+          # upload release assets
+          gh release create "v$VERSION" \
+            -F "$RELEASE_NOTE" \
+            ${{ fromJSON(env.PRERELEASE) && '--prerelease' || '' }} \
+            "build/$PKG_NAME-$VERSION.zip" \
+            "package.json" \
+
+  publish-vpm:
+    uses: anatawa12/vpm.anatawa12.com/.github/workflows/update-package.yml@master
+    needs: create-release
+    if: inputs.publish
+    with:
+      version: ${{ needs.create-release.outputs.version }}
+      environment: vpm.anatawa12.com
+    secrets:
+      TOKEN: ${{ secrets.VPM_GITHUB_PAT }}
