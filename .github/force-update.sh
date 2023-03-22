@@ -2,8 +2,8 @@
 
 {
   echo "Manually forced release"
-} >> .COMMIT-MESSAGE
+} >> /tmp/COMMIT-MESSAGE
 
-echo "RELEASE_NOTE=.COMMIT-MESSAGE" >> "$GITHUB_ENV"
+echo "RELEASE_NOTE=/tmp/COMMIT-MESSAGE" >> "$GITHUB_ENV"
 
 ./.github/verup-commit.sh

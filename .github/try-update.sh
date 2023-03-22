@@ -31,10 +31,10 @@ fi
   echo "chore: update gists"
   echo ""
   cat .CHANGES
-} >> .COMMIT-MESSAGE
+} >> /tmp/COMMIT-MESSAGE
 
-git commit -F .COMMIT-MESSAGE
+git commit -F /tmp/COMMIT-MESSAGE
 
-echo "RELEASE_NOTE=.COMMIT-MESSAGE" >> "$GITHUB_ENV"
+echo "RELEASE_NOTE=/tmp/COMMIT-MESSAGE" >> "$GITHUB_ENV"
 
 ./.github/verup-commit.sh
