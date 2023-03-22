@@ -86,7 +86,9 @@ namespace anatawa12.gists.selector
             for (var i = 0; i < list.Count; i++)
                 if (Selector.GistsById.TryGetValue(list[i], out var info))
                     list[i] = list[i] + ":" + info.Name;
-            Selector.UpdateAsmdef(list.ToArray());
+            var array = list.ToArray();
+            Selector.UpdateAsmdef(array);
+            Selector.SaveConfig(array);
         }
 
         private void LoadConfig()
