@@ -35,7 +35,7 @@ fi
 
 git commit -F .COMMIT-MESSAGE
 
-echo "RELEASE_NOTE.COMMIT-MESSAGE" >> "$GITHUB_ENV"
+echo "RELEASE_NOTE=.COMMIT-MESSAGE" >> "$GITHUB_ENV"
 
 VERSION="$(jq -r .version < package.json)"
 VERSION_PATCH="${VERSION##[0-9.]*.}"
