@@ -11,6 +11,9 @@ namespace anatawa12.gists.selector
     {
         None = 0,
         VRCSDK_WORLDS = 1 << 0,
+        VRCSDK_AVATARS = 1 << 1,
+        VRCSDK_BASE = 1 << 2,
+        UDON_SHARP = 1 << 3,
     }
 
     static class Defines
@@ -18,6 +21,15 @@ namespace anatawa12.gists.selector
         public const Define Active = 0
 #if VRCSDK_WORLDS
             | Define.VRCSDK_WORLDS
+#endif
+#if VRCSDK_AVATARS
+            | Define.VRCSDK_AVATARS
+#endif
+#if VRCSDK_BASE
+            | Define.VRCSDK_BASE
+#endif
+#if UDON_SHARP
+            | Define.UDON_SHARP
 #endif
             ;
         public static bool IsActive(Define define) => (Active & define) == define;

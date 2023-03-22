@@ -16,8 +16,58 @@ namespace anatawa12.gists.selector
 
         public static readonly GistInfo[] Gists =
         {
-            new GistInfo("5987f6b5357c3c91603fa07f215dfeab", "CompilationLogWindow",
-                "The window to see compilation progress")
+            new GistInfo("257fbbebd9b7dab8bf39c0c710a2bfc7", 
+                "CompileLogger",
+                "The .cs file to log compilation to some file. useful with tail -f"),
+
+            new GistInfo("def5f8a29179ecbcb45502fa3b4590ce", 
+                "CreateAssemblyDefinitionForUdonSharp",
+                "Adds menu to create assembly definition with U# assembly definition",
+                Define.UDON_SHARP),
+
+            new GistInfo("e825ec4ee39ae29b64fdcc2f3f07a58c", 
+            "MapGameObjects",
+                "MapGameObjects"),
+
+            new GistInfo("4476430cfcc2ccef4bc40341d20001cf", 
+                "Fake DynamicBone Components",
+                "Fake DynamicBone Component to make DB -> PB Converter in VRChat SDK works."),
+
+            new GistInfo("a4bb4e2e5d75b4fa5ba42e236aae564d", 
+            "ActualPerformanceWindow",
+                "A window to see actual performance rank on building avatars",
+                Define.VRCSDK_AVATARS),
+
+            new GistInfo("379c4d828c2a0add4d623f8668209cbc", 
+            "PhysBoneEditorUtilities",
+                "Set of utilities for PhysBone", 
+            Define.VRCSDK_AVATARS),
+
+            new GistInfo("4c900d5c15050fb5bdc0f9d027962183", 
+            "GenerateMeshWithBackFace",
+                "generate new mesh with backface. useful for quest avatars"),
+
+            new GistInfo("b8799da5d3131e4020f414439a4ea037", 
+            "Transfer Transform Window",
+                "A window to copy transform info recursively"),
+
+            new GistInfo("581b66619711eaf5ebacbd85369d62e6", 
+            "SetRandomBlueprintId",
+                "Set blueprint id without build",
+                Define.VRCSDK_BASE),
+
+            new GistInfo("5f847a1692fb30c2c9f00a47d50243ad", 
+                "AndroidOnlyCheck",
+                "A VRCSDKPreprocessAvatarCallback which prevents PC builds.",
+                Define.VRCSDK_AVATARS),
+
+            new GistInfo("f7476d2d727bc43d86121f6a3337d2c3", 
+                "MergeAnimationClip",
+                "Micro tool to multiple animation clip into one."),
+
+            new GistInfo("5987f6b5357c3c91603fa07f215dfeab", 
+            "CompilationLogWindow",
+                "The window to see compilation progress"),
         };
 
         private static readonly Dictionary<string, GistInfo> GistsById = Gists.ToDictionary(x => x.ID);
