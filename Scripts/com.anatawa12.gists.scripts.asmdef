@@ -1,0 +1,24 @@
+{
+    "name": "com.anatawa12.gists.scripts",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "Unity",
+            "expression": "",
+            "define": "ANATAWA12_GISTS_VPM_PACKAGE"
+        },
+        {
+            "name": "Unity",
+            "expression": "",
+            "define": "GIST_5987f6b5357c3c91603fa07f215dfeab"
+        }
+    ],
+    "noEngineReferences": false
+}
