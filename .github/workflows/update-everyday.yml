@@ -75,9 +75,9 @@ jobs:
   publish-vpm:
     uses: anatawa12/vpm.anatawa12.com/.github/workflows/update-package.yml@master
     needs: everyday-check
-    if: ${{ needs.create-release.outputs.version }}
+    if: ${{ needs.everyday-check.outputs.version }}
     with:
-      version: ${{ needs.create-release.outputs.version }}
+      version: ${{ needs.everyday-check.outputs.version }}
       environment: vpm.anatawa12.com
     secrets:
       TOKEN: ${{ secrets.VPM_GITHUB_PAT }}
