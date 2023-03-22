@@ -55,66 +55,6 @@
             "name": "Unity",
             "expression": "",
             "define": "ANATAWA12_GISTS_VPM_PACKAGE"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_257fbbebd9b7dab8bf39c0c710a2bfc7"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_def5f8a29179ecbcb45502fa3b4590ce"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_e825ec4ee39ae29b64fdcc2f3f07a58c"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_4476430cfcc2ccef4bc40341d20001cf"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_a4bb4e2e5d75b4fa5ba42e236aae564d"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_379c4d828c2a0add4d623f8668209cbc"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_4c900d5c15050fb5bdc0f9d027962183"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_b8799da5d3131e4020f414439a4ea037"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_581b66619711eaf5ebacbd85369d62e6"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_5f847a1692fb30c2c9f00a47d50243ad"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_f7476d2d727bc43d86121f6a3337d2c3"
-        },
-        {
-            "name": "Unity",
-            "expression": "",
-            "define": "GIST_5987f6b5357c3c91603fa07f215dfeab"
         }
     ],
     "noEngineReferences": false

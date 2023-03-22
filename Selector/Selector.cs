@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace anatawa12.gists.selector
     static class Selector {
         const string ScriptsAsmdefGuid = "9f3777f8fca1841a28e974df5f37df83";
         const string SettingsFolderPath = "ProjectSettings/Packages/com.anatawa12.gists";
-        const string SettingsFilePath = SettingsFolderPath + "/settings.json";
+        const string GistsFilePath = SettingsFolderPath + "/EnabledGists.txt";
 
         public static readonly GistInfo[] Gists =
         {
@@ -70,13 +71,13 @@ namespace anatawa12.gists.selector
                 "The window to see compilation progress"),
         };
 
-        private static readonly Dictionary<string, GistInfo> GistsById = Gists.ToDictionary(x => x.ID);
+        public static readonly IReadOnlyDictionary<string, GistInfo> GistsById = Gists.ToDictionary(x => x.ID);
 
         static Selector()
         {
-            if (!File.Exists(SettingsFilePath))
+            if (!File.Exists(GistsFilePath))
             {
-                SaveConfig(new SelectorSettings());
+                SaveConfig(Array.Empty<string>());
             }
             else
             {
@@ -84,7 +85,7 @@ namespace anatawa12.gists.selector
             }
         }
 
-        public static void UpdateAsmdef(SelectorSettings config)
+        public static void UpdateAsmdef(string[] gists)
         {
             var defines = new List<string>();
 
@@ -100,21 +101,14 @@ namespace anatawa12.gists.selector
                 defines.Add($"GIST_{info.ID}");
             }
 
-            if (config.allPackages)
+            foreach (var configPackage in gists)
             {
-                foreach (var info in Gists)
+                if (string.IsNullOrEmpty(configPackage)) continue;
+                var id = configPackage.Split(new[] {':'}, 2);
+                if (GistsById.TryGetValue(id[0], out var info))
                     TryAddGist(info);
-            }
-            else
-            {
-                foreach (var configPackage in config.packages)
-                {
-                    var id = configPackage.Split(new[] {':'}, 2);
-                    if (GistsById.TryGetValue(id[0], out var info))
-                        TryAddGist(info);
-                    else
-                        Debug.LogWarning($"Gist with id {id[0]} ({(id.Length == 2 ? id[1] : "unknown")}) not found");
-                }
+                else
+                    Debug.LogWarning($"Gist with id {id[0]} ({(id.Length == 2 ? id[1] : "unknown")}) not found");
             }
 
             var asmdefPath = AssetDatabase.GUIDToAssetPath(ScriptsAsmdefGuid);
@@ -147,24 +141,19 @@ namespace anatawa12.gists.selector
             AssetDatabase.Refresh();
         }
 
-        public static SelectorSettings LoadConfig()
+        public static string[] LoadConfig()
         {
-            return JsonUtility.FromJson<SelectorSettings>(File.ReadAllText(SettingsFilePath));
+            return File.ReadAllText(GistsFilePath).Split(new []{"\r\n", "\n"}, StringSplitOptions.None);
         }
 
-        public static void SaveConfig(SelectorSettings config)
+        public static void SaveConfig(string[] config)
         {
             Directory.CreateDirectory(SettingsFolderPath);
-            File.WriteAllText(SettingsFilePath, JsonUtility.ToJson(config, true));
+            var result = new StringBuilder();
+            foreach (var s in config)
+                result.Append(s).Append('\n');
+            File.WriteAllText(GistsFilePath, result.ToString());
         }
-    }
-
-    [Serializable]
-    class SelectorSettings
-    {
-        // <id>:<name>
-        public string[] packages;
-        public bool allPackages;
     }
 
     readonly struct GistInfo
