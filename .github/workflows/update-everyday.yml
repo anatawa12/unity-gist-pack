@@ -2,6 +2,11 @@ name: Create Release
 
 on:
   workflow_dispatch:
+    inputs:
+      publish:
+        description: "True to force publish new release"
+        type: boolean
+        required: false
   schedule:
     - cron: '0 0 * * *'
 
@@ -27,8 +32,12 @@ jobs:
       - run: git config --global user.name 'github-actions[bot]'
       - run: git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-      - name: Prepare build folder
+      - name: Try update
         run: ./.github/try-update.sh
+
+      - name: Force update
+        if: ${{ !env.VERSION && inputs.publish }}
+        run: ./.github/force-update.sh
 
       - name: Prepare build folder
         if: ${{ env.VERSION }}
