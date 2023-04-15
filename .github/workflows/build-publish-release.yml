@@ -1,0 +1,84 @@
+name: Build Publish Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version name"
+        type: boolean
+        required: string
+      release-note:
+        description: "Release note"
+        type: boolean
+        required: string
+  workflow_call:
+    inputs:
+      version:
+        description: "Version name"
+        type: boolean
+        required: string
+      release-note:
+        description: "Release note"
+        type: boolean
+        required: string
+    secrets:
+      VPM_GITHUB_PAT:
+        required: true
+
+env:
+  PKG_NAME: com.anatawa12.gists
+
+permissions: write-all
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ env.VERSION }}
+    env:
+      VERSION: ${{ inputs.version }}
+      RELEASE_NOTE: ${{ inputs.release-note }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Commit for 
+        run: ./.github/commit.sh
+
+      - name: Prepare build folder
+        run: mkdir build
+
+      - name: Build VPM release
+        run: |
+          zip -r "build/$PKG_NAME-$VERSION.zip" . -x 'build*' '.*'
+      - name: Upload VPM release
+        uses: actions/upload-artifact@v3
+        with:
+          name: vpm-package
+          path: build/${{ env.PKG_NAME }}-${{ env.VERSION }}.zip
+
+      - name: Publish Release
+        run: |
+          git push && git push origin "v$VERSION"
+
+      - name: Publish release to github
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          sleep 1
+          # upload release assets
+          gh release create "v$VERSION" \
+            -n "$RELEASE_NOTE" \
+            "build/$PKG_NAME-$VERSION.zip" \
+            "package.json" \
+
+  publish-vpm:
+    uses: anatawa12/vpm.anatawa12.com/.github/workflows/update-package.yml@master
+    needs: everyday-check
+    with:
+      version: ${{ inputs.version }}
+      environment: vpm.anatawa12.com
+    secrets:
+      TOKEN: ${{ secrets.VPM_GITHUB_PAT }}

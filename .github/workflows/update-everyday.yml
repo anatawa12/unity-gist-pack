@@ -1,17 +1,8 @@
 name: Create Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      publish:
-        description: "True to force publish new release"
-        type: boolean
-        required: false
   schedule:
     - cron: '0 0 * * *'
-
-env:
-  PKG_NAME: com.anatawa12.gists
 
 concurrency:
   group: publish
@@ -24,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       version: ${{ env.VERSION }}
+      release_note: ${{ outputs.read-release-note.outputs.result }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -35,49 +27,20 @@ jobs:
       - name: Try update
         run: ./.github/try-update.sh
 
-      - name: Force update
-        if: ${{ !env.VERSION && inputs.publish }}
-        run: ./.github/force-update.sh
-
-      - name: Prepare build folder
+      - name: Read release note to outputs
+        id: read-release-note
+        uses: actions/github-script
         if: ${{ env.VERSION }}
-        run: mkdir build
-
-      - name: Build VPM release
-        if: ${{ env.VERSION }}
-        run: |
-          zip -r "build/$PKG_NAME-$VERSION.zip" . -x 'build*' '.*'
-      - name: Upload VPM release
-        if: ${{ env.VERSION }}
-        uses: actions/upload-artifact@v3
         with:
-          name: vpm-package
-          path: build/${{ env.PKG_NAME }}-${{ env.VERSION }}.zip
+          result-encoding: string
+          script: return await require("fs/promises").readFile(process.env.RELEASE_NOTE)
 
-      - name: Publish Release
-        if: ${{ env.VERSION }}
-        run: |
-          git push && git push origin "v$VERSION"
-
-      - name: Publish release to github
-        if: ${{ env.VERSION }}
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          sleep 1
-          # upload release assets
-          gh release create "v$VERSION" \
-            -F "$RELEASE_NOTE" \
-            "build/$PKG_NAME-$VERSION.zip" \
-            "package.json" \
-
-  publish-vpm:
-    uses: anatawa12/vpm.anatawa12.com/.github/workflows/update-package.yml@master
+  build-publish-release:
+    uses: ./.github/workflows/build-publish-release.yml
     needs: everyday-check
     if: ${{ needs.everyday-check.outputs.version }}
     with:
       version: ${{ needs.everyday-check.outputs.version }}
-      environment: vpm.anatawa12.com
+      release-note: ${{ needs.everyday-check.outputs.release-note }}
     secrets:
-      TOKEN: ${{ secrets.VPM_GITHUB_PAT }}
+      VPM_GITHUB_PAT: ${{ secrets.VPM_GITHUB_PAT }}

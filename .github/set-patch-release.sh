@@ -10,4 +10,4 @@ VERSION="$VERSION_MAJOR_PATCH$NEW_PATCH"
 
 export VERSION
 
-./.github/commit.sh
+echo "VERSION=$VERSION" >> "$GITHUB_ENV"

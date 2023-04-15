@@ -8,8 +8,6 @@ git add "package.json"
 
 git commit -m "Version $VERSION"
 
-echo "VERSION=$VERSION" >> "$GITHUB_ENV"
-
 git tag "v$VERSION"
 
 git clean -fd

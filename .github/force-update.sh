@@ -6,4 +6,4 @@
 
 echo "RELEASE_NOTE=/tmp/COMMIT-MESSAGE" >> "$GITHUB_ENV"
 
-./.github/verup-commit.sh
+./.github/set-patch-release.sh
