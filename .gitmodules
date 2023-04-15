@@ -34,3 +34,6 @@
 [submodule "Scripts/f7476d2d727bc43d86121f6a3337d2c3"]
 	path = Scripts/f7476d2d727bc43d86121f6a3337d2c3
 	url = https://gist.github.com/anatawa12/f7476d2d727bc43d86121f6a3337d2c3.git
+[submodule "Scripts/8375f82dbc751086a32fcd2c626fa09b"]
+	path = Scripts/8375f82dbc751086a32fcd2c626fa09b
+	url = https://gist.github.com/anatawa12/8375f82dbc751086a32fcd2c626fa09b

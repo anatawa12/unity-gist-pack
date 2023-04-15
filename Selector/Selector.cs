@@ -69,6 +69,10 @@ namespace anatawa12.gists.selector
             new GistInfo("5987f6b5357c3c91603fa07f215dfeab", 
             "CompilationLogWindow",
                 "The window to see compilation progress"),
+
+            new GistInfo("8375f82dbc751086a32fcd2c626fa09b",
+                "HumanoidInfoWindow",
+                "Actual bone mapping to Animator"),
         };
 
         public static readonly IReadOnlyDictionary<string, GistInfo> GistsById = Gists.ToDictionary(x => x.ID);
