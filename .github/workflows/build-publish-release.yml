@@ -76,7 +76,7 @@ jobs:
 
   publish-vpm:
     uses: anatawa12/vpm.anatawa12.com/.github/workflows/update-package.yml@master
-    needs: everyday-check
+    needs: publish
     with:
       version: ${{ inputs.version }}
       environment: vpm.anatawa12.com
