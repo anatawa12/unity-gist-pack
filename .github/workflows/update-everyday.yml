@@ -28,8 +28,8 @@ jobs:
         run: ./.github/try-update.sh
 
       - name: Read release note to outputs
+        uses: actions/github-script@v6
         id: read-release-note
-        uses: actions/github-script
         if: ${{ env.VERSION }}
         with:
           result-encoding: string

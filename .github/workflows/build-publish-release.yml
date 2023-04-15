@@ -5,22 +5,22 @@ on:
     inputs:
       version:
         description: "Version name"
-        type: boolean
-        required: string
+        type: string
+        required: true
       release-note:
         description: "Release note"
-        type: boolean
-        required: string
+        type: string
+        required: true
   workflow_call:
     inputs:
       version:
         description: "Version name"
-        type: boolean
-        required: string
+        type: string
+        required: true
       release-note:
         description: "Release note"
-        type: boolean
-        required: string
+        type: string
+        required: true
     secrets:
       VPM_GITHUB_PAT:
         required: true
