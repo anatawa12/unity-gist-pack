@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Version name"
+        description: "Version name without v prefix"
         type: string
         required: true
       release-note:
@@ -14,7 +14,7 @@ on:
   workflow_call:
     inputs:
       version:
-        description: "Version name"
+        description: "Version name without v prefix"
         type: string
         required: true
       release-note:
