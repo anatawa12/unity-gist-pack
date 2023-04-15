@@ -43,6 +43,9 @@ jobs:
         with:
           submodules: true
 
+      - run: git config --global user.name 'github-actions[bot]'
+      - run: git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
       - name: Commit for 
         run: ./.github/commit.sh
 

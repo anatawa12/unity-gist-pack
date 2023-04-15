@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 cp package.json package.json.1
 
 jq --arg VERSION "$VERSION" '.version=$VERSION | .' < package.json.1 > package.json
