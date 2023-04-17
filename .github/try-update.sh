@@ -34,6 +34,7 @@ fi
 } >> /tmp/COMMIT-MESSAGE
 
 git commit -F /tmp/COMMIT-MESSAGE
+git push
 
 echo "RELEASE_NOTE=/tmp/.CHANGES" >> "$GITHUB_ENV"
 
