@@ -13,7 +13,7 @@ find ./* -type d | while read -r file; do
   git reset --hard FETCH_HEAD
 
   if [ "$PRE_HEAD" != "$(git rev-parse HEAD)" ]; then
-    echo "$(basename "$file") is updated to $(git rev-parse HEAD)" >> ../../.CHANGES
+    echo "$(basename "$file") is updated to $(git rev-parse HEAD)" >> /tmp/.CHANGES
   fi
 
   popd
@@ -30,7 +30,7 @@ fi
 {
   echo "chore: update gists"
   echo ""
-  cat .CHANGES
+  cat /tmp/.CHANGES
 } >> /tmp/COMMIT-MESSAGE
 
 git commit -F /tmp/COMMIT-MESSAGE
