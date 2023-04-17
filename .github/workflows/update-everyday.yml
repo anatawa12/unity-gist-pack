@@ -36,6 +36,9 @@ jobs:
           result-encoding: string
           script: return await require("fs/promises").readFile(process.env.RELEASE_NOTE)
 
+      - name: Wait a while
+        run: set 10
+
   build-publish-release:
     uses: ./.github/workflows/build-publish-release.yml
     needs: everyday-check
