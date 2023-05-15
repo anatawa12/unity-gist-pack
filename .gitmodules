@@ -37,3 +37,6 @@
 [submodule "Scripts/8375f82dbc751086a32fcd2c626fa09b"]
 	path = Scripts/HumanoidInfoWindow
 	url = https://gist.github.com/anatawa12/8375f82dbc751086a32fcd2c626fa09b
+[submodule "Scripts/875d0776305b771ba7ee74c656f082f6"]
+	path = Scripts/EditorScreenshotTakeTool
+	url = https://gist.github.com/anatawa12/875d0776305b771ba7ee74c656f082f6.git
