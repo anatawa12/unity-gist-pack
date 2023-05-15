@@ -1,39 +1,39 @@
 [submodule "Scripts/5987f6b5357c3c91603fa07f215dfeab"]
-	path = Scripts/5987f6b5357c3c91603fa07f215dfeab
+	path = Scripts/CompilationLogWindow
 	url = https://gist.github.com/anatawa12/5987f6b5357c3c91603fa07f215dfeab.git
 [submodule "Scripts/257fbbebd9b7dab8bf39c0c710a2bfc7"]
-	path = Scripts/257fbbebd9b7dab8bf39c0c710a2bfc7
+	path = Scripts/CompileLogger
 	url = https://gist.github.com/anatawa12/257fbbebd9b7dab8bf39c0c710a2bfc7.git
 [submodule "Scripts/def5f8a29179ecbcb45502fa3b4590ce"]
-	path = Scripts/def5f8a29179ecbcb45502fa3b4590ce
+	path = Scripts/CreateAssemblyDefinitionForUdonSharp
 	url = https://gist.github.com/anatawa12/def5f8a29179ecbcb45502fa3b4590ce.git
 [submodule "Scripts/e825ec4ee39ae29b64fdcc2f3f07a58c"]
-	path = Scripts/e825ec4ee39ae29b64fdcc2f3f07a58c
+	path = Scripts/MapGameObjects
 	url = https://gist.github.com/anatawa12/e825ec4ee39ae29b64fdcc2f3f07a58c.git
 [submodule "Scripts/4476430cfcc2ccef4bc40341d20001cf"]
-	path = Scripts/4476430cfcc2ccef4bc40341d20001cf
+	path = Scripts/FakeDynamicBoneComponents
 	url = https://gist.github.com/anatawa12/4476430cfcc2ccef4bc40341d20001cf.git
 [submodule "Scripts/a4bb4e2e5d75b4fa5ba42e236aae564d"]
-	path = Scripts/a4bb4e2e5d75b4fa5ba42e236aae564d
+	path = Scripts/ActualPerformanceWindow
 	url = https://gist.github.com/anatawa12/a4bb4e2e5d75b4fa5ba42e236aae564d.git
 [submodule "Scripts/379c4d828c2a0add4d623f8668209cbc"]
-	path = Scripts/379c4d828c2a0add4d623f8668209cbc
+	path = Scripts/PhysBoneEditorUtilities
 	url = https://gist.github.com/anatawa12/379c4d828c2a0add4d623f8668209cbc.git
 [submodule "Scripts/4c900d5c15050fb5bdc0f9d027962183"]
-	path = Scripts/4c900d5c15050fb5bdc0f9d027962183
+	path = Scripts/GenerateMeshWithBackFace
 	url = https://gist.github.com/anatawa12/4c900d5c15050fb5bdc0f9d027962183.git
 [submodule "Scripts/b8799da5d3131e4020f414439a4ea037"]
-	path = Scripts/b8799da5d3131e4020f414439a4ea037
+	path = Scripts/TransferTransformWindow
 	url = https://gist.github.com/anatawa12/b8799da5d3131e4020f414439a4ea037.git
 [submodule "Scripts/581b66619711eaf5ebacbd85369d62e6"]
-	path = Scripts/581b66619711eaf5ebacbd85369d62e6
+	path = Scripts/SetRandomBlueprintId
 	url = https://gist.github.com/anatawa12/581b66619711eaf5ebacbd85369d62e6.git
 [submodule "Scripts/5f847a1692fb30c2c9f00a47d50243ad"]
-	path = Scripts/5f847a1692fb30c2c9f00a47d50243ad
+	path = Scripts/AndroidOnlyCheck
 	url = https://gist.github.com/anatawa12/5f847a1692fb30c2c9f00a47d50243ad.git
 [submodule "Scripts/f7476d2d727bc43d86121f6a3337d2c3"]
-	path = Scripts/f7476d2d727bc43d86121f6a3337d2c3
+	path = Scripts/MergeAnimationClip
 	url = https://gist.github.com/anatawa12/f7476d2d727bc43d86121f6a3337d2c3.git
 [submodule "Scripts/8375f82dbc751086a32fcd2c626fa09b"]
-	path = Scripts/8375f82dbc751086a32fcd2c626fa09b
+	path = Scripts/HumanoidInfoWindow
 	url = https://gist.github.com/anatawa12/8375f82dbc751086a32fcd2c626fa09b

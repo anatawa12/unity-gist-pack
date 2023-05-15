@@ -1,8 +1,8 @@
 #!/bin/sh
 
-git submodule add "https://gist.github.com/anatawa12/$1.git"
+git submodule add --name "Scripts/$1" "https://gist.github.com/anatawa12/$1.git" "$2"
 
-cat << HEREDOC > "$1.meta"
+cat << HEREDOC > "$2.meta"
 fileFormatVersion: 2
 guid: $1
 folderAsset: yes
@@ -13,4 +13,4 @@ DefaultImporter:
   assetBundleVariant: 
 HEREDOC
 
-git add "$1.meta"
+git add "$2.meta"
