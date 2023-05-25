@@ -77,6 +77,10 @@ namespace anatawa12.gists.selector
             new GistInfo("875d0776305b771ba7ee74c656f082f6",
                 "EditorScreenshotTakeTool",
                 "A tool to take screen shot of an Editor"),
+
+            new GistInfo("94d6fd4272025fd26962476100a20ff0",
+                "SelectSkinnedMeshBones",
+                "Select GameObjects used by SkinnedMeshRenderers"),
         };
 
         public static readonly IReadOnlyDictionary<string, GistInfo> GistsById = Gists.ToDictionary(x => x.ID);

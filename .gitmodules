@@ -40,3 +40,6 @@
 [submodule "Scripts/875d0776305b771ba7ee74c656f082f6"]
 	path = Scripts/EditorScreenshotTakeTool
 	url = https://gist.github.com/anatawa12/875d0776305b771ba7ee74c656f082f6.git
+[submodule "Scripts/94d6fd4272025fd26962476100a20ff0"]
+	path = Scripts/SelectSkinnedMeshBones
+	url = https://gist.github.com/anatawa12/94d6fd4272025fd26962476100a20ff0.git
