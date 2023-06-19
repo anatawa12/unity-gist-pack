@@ -43,6 +43,11 @@ jobs:
         with:
           submodules: true
           ref: master
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.111.3'
+          extended: true
 
       - run: git config --global user.name 'github-actions[bot]'
       - run: git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
