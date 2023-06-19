@@ -1,3 +1,6 @@
+[submodule ".docs/themes/hugo-book"]
+	path = .docs/themes/hugo-book
+	url = https://github.com/alex-shpak/hugo-book.git
 [submodule "Scripts/5987f6b5357c3c91603fa07f215dfeab"]
 	path = Scripts/CompilationLogWindow
 	url = https://gist.github.com/anatawa12/5987f6b5357c3c91603fa07f215dfeab.git

@@ -1,0 +1,17 @@
+---
+title: Basic Usage
+weight: 1
+---
+
+# Basic Usage
+
+Unity Gist Packに複数のgistで構成されるため、インストール後にいくつかのgistを有効化する必要があります。
+
+選択ツールを`Tools/anatawa12's gist selector`から開いて、有効にしたいgistにチェックを入れ、`Apply Changes`をクリックしてください。
+
+依存関係がないパッケージは有効化できません。
+
+例えば、SetRandomBlueprintIdはVRCSDK Base向けに作られているため、もしVRCSDK Baseがプロジェクトにないと無効化されています。\
+また、ActualPerformanceWindowはVRCSDK Avatars向けに作られているため、もしVRCSDK Avatarsがプロジェクトにないと無効化されています。
+
+![selector window](selector.png)

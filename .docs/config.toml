@@ -1,0 +1,22 @@
+baseURL = 'https://vpm.anatawa12.com/gists'
+languageCode = 'en-us'
+title = 'Unity Gists Pack (SNAPSHOT)'
+theme = 'hugo-book'
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+
+[languages.en]
+weight = 1
+languageName = 'English'
+
+[languages.ja]
+weight = 1
+languageName = '日本語'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+BookTheme = 'auto'
+BookRepo = 'https://github.com/anatawa12/unity-gist-pack'
+BookEditPath = 'edit/master/.docs'
