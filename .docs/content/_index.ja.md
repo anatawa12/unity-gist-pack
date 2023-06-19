@@ -5,8 +5,8 @@ type: docs
 
 # anatawa12's gist pack for Unity
 
-anatawa12によるgist群です。
-このパックを使用することでVPMからgistを更新できます！
+anatawa12のちょっとしたエディタ拡張群です。
+このパックを使用するとanatawa12がgistで公開しているエディタ拡張をVPMから導入・更新する事が出来ます。
 
 anatawa12's gist pack for Unityは[GitHub]上で開発され、[MIT License]で公開されているオープンソースソフトウェアです。
 
