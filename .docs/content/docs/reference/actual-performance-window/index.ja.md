@@ -16,5 +16,5 @@ Actual Performance WindowはPlay Modeやbuild時のアバターのPerformance Ra
 
 ![window image](window.png)
 
-[Avatar Optimizer]: https://vpm.anatawa12.com/avatar-optimizer/en/
-[Modular Avatar]: https://modular-avatar.nadena.dev/
+[Avatar Optimizer]: https://vpm.anatawa12.com/avatar-optimizer/ja/
+[Modular Avatar]: https://modular-avatar.nadena.dev/ja/
