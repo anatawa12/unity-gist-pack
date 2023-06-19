@@ -1,6 +1,6 @@
 baseURL = 'https://vpm.anatawa12.com/gists'
 languageCode = 'en-us'
-title = 'Unity Gists Pack'
+title = 'Unity Gists Pack (SNAPSHOT)'
 theme = 'hugo-book'
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = true
