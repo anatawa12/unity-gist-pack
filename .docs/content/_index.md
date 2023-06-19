@@ -3,19 +3,19 @@ title: Introduction
 type: docs
 ---
 
-# Unity Gist Pack
+# anatawa12's gist pack for Unity Gist Pack
 
 Set of anatawa12's gists for Unity.
 With this pack, you can upgrade gists using VPM.
 
-Unity Gists Pack is an Open Source Software developed on [GitHub] published under the [MIT License].
+anatawa12's gist pack for Unity is an Open Source Software developed on [GitHub] published under the [MIT License].
 
 [GitHub]: https://github.com/anatawa12/unity-gist-pack
 [MIT License]: https://github.com/anatawa12/unity-gist-pack/blob/HEAD/LICENSE
 
 ## Installation {#installation}
 
-Unity Gists Pack is published with [VPM][vpm] repository, so you can install this package using any vpm clients.
+anatawa12's gist pack for Unity is published with [VPM][vpm] repository, so you can install this package using any vpm clients.
 
 ### With VCC (Recommended) {#installation-vcc}
 

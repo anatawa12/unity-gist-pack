@@ -5,7 +5,7 @@ weight: 1
 
 # Basic Usage
 
-Unity Gist Pack consists of multiple gists so after installing this package, you have to enable some gists.
+anatawa12's gist pack for Unity consists of multiple gists so after installing this package, you have to enable some gists.
 
 Please open selector window from `Tools/anatawa12's gist selector`, check gists you want to enable, and click `Apply Changes`.
 

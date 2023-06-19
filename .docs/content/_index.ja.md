@@ -3,19 +3,19 @@ title: Introduction
 type: docs
 ---
 
-# Unity Gist Pack
+# anatawa12's gist pack for Unity
 
 anatawa12によるgist群です。
 このパックを使用することでVPMからgistを更新できます！
 
-Unity Gists Packは[GitHub]上で開発され、[MIT License]で公開されているオープンソースソフトウェアです。
+anatawa12's gist pack for Unityは[GitHub]上で開発され、[MIT License]で公開されているオープンソースソフトウェアです。
 
 [GitHub]: https://github.com/anatawa12/unity-gist-pack
 [MIT License]: https://github.com/anatawa12/unity-gist-pack/blob/HEAD/LICENSE
 
 ## インストール {#installation}
 
-Unity Gists Packは[VPM][vpm]レポジトリを使用して公開されているため、任意のvpmクライアントを使用してインストールできます。
+anatawa12's gist pack for Unityは[VPM][vpm]レポジトリを使用して公開されているため、任意のvpmクライアントを使用してインストールできます。
 
 ### VCC を使用する (推奨) {#installation-vcc}
 
