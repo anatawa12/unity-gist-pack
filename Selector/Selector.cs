@@ -81,6 +81,10 @@ namespace anatawa12.gists.selector
             new GistInfo("94d6fd4272025fd26962476100a20ff0",
                 "SelectSkinnedMeshBones",
                 "Select GameObjects used by SkinnedMeshRenderers"),
+
+            new GistInfo("ae5f7b3c5e07150ddc1eb9f0948019ff", 
+                "FindReferenceChainRecursive",
+                "Tool to find unexpected references in avatars or scenes"),
         };
 
         public static readonly IReadOnlyDictionary<string, GistInfo> GistsById = Gists.ToDictionary(x => x.ID);
