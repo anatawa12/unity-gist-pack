@@ -85,6 +85,10 @@ namespace anatawa12.gists.selector
             new GistInfo("ae5f7b3c5e07150ddc1eb9f0948019ff", 
                 "FindReferenceChainRecursive",
                 "Tool to find unexpected references in avatars or scenes"),
+
+            new GistInfo("RemovePropertiesFromAnimations",
+                "RemovePropertiesFromAnimations",
+                "A window to remove some property from multiple animations"),
         };
 
         public static readonly IReadOnlyDictionary<string, GistInfo> GistsById = Gists.ToDictionary(x => x.ID);

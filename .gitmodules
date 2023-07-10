@@ -49,3 +49,6 @@
 [submodule "Scripts/ae5f7b3c5e07150ddc1eb9f0948019ff"]
 	path = Scripts/FindReferenceChainRecursive
 	url = https://gist.github.com/anatawa12/ae5f7b3c5e07150ddc1eb9f0948019ff.git
+[submodule "Scripts/930c08c724af17197a401bcfd580985b"]
+	path = Scripts/RemovePropertiesFromAnimations
+	url = https://gist.github.com/anatawa12/930c08c724af17197a401bcfd580985b.git
