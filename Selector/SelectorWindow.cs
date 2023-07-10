@@ -9,11 +9,13 @@ namespace anatawa12.gists.selector
     class SelectorWindow : EditorWindow, ISerializationCallbackReceiver
     {
         private HashSet<string> _guids = new HashSet<string>();
+        [SerializeField] private Vector2 scroll;
         [SerializeField] private bool dirty;
         [SerializeField] private string[] guidsSerialized;
 
         private void OnGUI()
         {
+            scroll = EditorGUILayout.BeginScrollView(scroll);
             var guiContent = new GUIContent();
             foreach (var gistInfo in Selector.Gists)
             {
@@ -39,6 +41,7 @@ namespace anatawa12.gists.selector
                     else _guids.Remove(gistInfo.ID);
                 }
             }
+            EditorGUILayout.EndScrollView();
 
             EditorGUI.BeginDisabledGroup(!dirty);
             if (GUILayout.Button("Apply Changes"))
