@@ -86,7 +86,7 @@ namespace anatawa12.gists.selector
                 "FindReferenceChainRecursive",
                 "Tool to find unexpected references in avatars or scenes"),
 
-            new GistInfo("RemovePropertiesFromAnimations",
+            new GistInfo("930c08c724af17197a401bcfd580985b",
                 "RemovePropertiesFromAnimations",
                 "A window to remove some property from multiple animations"),
         };
