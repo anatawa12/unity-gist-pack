@@ -89,6 +89,10 @@ namespace anatawa12.gists.selector
             new GistInfo("930c08c724af17197a401bcfd580985b",
                 "RemovePropertiesFromAnimations",
                 "A window to remove some property from multiple animations"),
+
+            new GistInfo("ecf33339c315f259cee62b304910fe43",
+                "SetDirtyRecursively",
+                "Set dirty all components on selected GameObject to avoid reference to prefab asset"),
         };
 
         public static readonly IReadOnlyDictionary<string, GistInfo> GistsById = Gists.ToDictionary(x => x.ID);

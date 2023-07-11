@@ -52,3 +52,6 @@
 [submodule "Scripts/930c08c724af17197a401bcfd580985b"]
 	path = Scripts/RemovePropertiesFromAnimations
 	url = https://gist.github.com/anatawa12/930c08c724af17197a401bcfd580985b.git
+[submodule "Scripts/ecf33339c315f259cee62b304910fe43"]
+	path = Scripts/SetDirtyRecursively
+	url = https://gist.github.com/anatawa12/ecf33339c315f259cee62b304910fe43.git
