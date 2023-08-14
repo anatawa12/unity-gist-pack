@@ -97,6 +97,10 @@ namespace anatawa12.gists.selector
             new GistInfo("4733d6e695df5dd5a08c599189bba589",
                 "AlignXAxisOnPlaneWithYRotation",
                 "Align X axis of multiple GameObjects onto plane of the gameobjects. This is made to align rotation of skirt bone."),
+
+            new GistInfo("6af2d5e41b0941aee1ed3fd7e0860ac0",
+                "MultiGizmo",
+                "Align X axis of multiple GameObjects onto plane of the gameobjects. This is made to align rotation of skirt bone."),
         };
 
         public static readonly IReadOnlyDictionary<string, GistInfo> GistsById = Gists.ToDictionary(x => x.ID);
