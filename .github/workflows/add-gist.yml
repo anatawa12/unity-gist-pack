@@ -80,7 +80,7 @@ jobs:
           git add gists.json
 
       - name: Commit
-        run: git commit -m "add $GIST_NAME"
+        run: git commit -m "add $GIST_NAME" && git push
 
       - name: Set Next Version
         run: ./.github/set-minor-release.sh
