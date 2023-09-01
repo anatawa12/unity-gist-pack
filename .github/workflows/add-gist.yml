@@ -22,11 +22,9 @@ on:
       constraints:
         description: "Required Constraints for the Gist. ';' separated"
         type: string
-        required: true
       replacing-guids:
         description: "Replacing GUIDs for the Gist. 'original:replaced' ';' separated"
         type: string
-        required: true
 
 env:
   PKG_NAME: com.anatawa12.gists
