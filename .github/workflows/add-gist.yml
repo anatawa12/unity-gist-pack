@@ -54,7 +54,7 @@ jobs:
 
       - name: Add Gist Git Repository
         working-directory: Scripts
-        run: ./add-gist.sh "$GIST_GUID" "$FOLDER_NAME"
+        run: ./.add-gist.sh "$GIST_GUID" "$FOLDER_NAME"
 
       - name: Update gists.json
         run: |
