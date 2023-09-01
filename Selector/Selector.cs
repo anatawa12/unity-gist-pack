@@ -35,6 +35,7 @@ namespace anatawa12.gists.selector
         {
             var config = ParseConfig(gists);
             SyncAsmdef(config);
+            SyncGuid(config);
         }
 
         private static HashSet<string> ParseConfig(string[] gists)
@@ -102,6 +103,49 @@ namespace anatawa12.gists.selector
 
             File.WriteAllText(asmdefPath, JsonUtility.ToJson(asmdef, true));
             AssetDatabase.ImportAsset(asmdefPath);
+        }
+
+        private static void SyncGuid(HashSet<string> config)
+        {
+            var updatedPaths = new List<string>();
+
+            foreach (var gistInfo in Gists)
+            {
+                if (config.Contains(gistInfo.ID))
+                {
+                    foreach (var gistInfoGuid in gistInfo.Guids)
+                        ReplaceGuid(gistInfoGuid.disabled, gistInfoGuid.enabled);
+                }
+                else
+                {
+                    foreach (var gistInfoGuid in gistInfo.Guids)
+                    {
+                        ReplaceGuid(gistInfoGuid.enabled, gistInfoGuid.disabled);
+
+                    }
+                }
+            }
+
+            // replace guid
+            void ReplaceGuid(string replaceFrom, string replaceTo)
+            {
+                var path = AssetDatabase.GUIDToAssetPath(replaceFrom);
+                if (string.IsNullOrEmpty(path)) return; // replace from not found: already replace to
+                var actualGuid = AssetDatabase.AssetPathToGUID(path);
+                if (actualGuid != replaceFrom) return;
+
+                // we need to update the guid
+                updatedPaths.Add(path);
+
+                var metaPath = $"{path}.meta";
+
+                var metaData = File.ReadAllText(metaPath);
+                metaData = metaData.Replace(replaceFrom, replaceTo);
+                File.WriteAllText(metaPath, metaData);
+            }
+
+            foreach (var updatedPath in updatedPaths)
+                AssetDatabase.ImportAsset(updatedPath);
         }
 
         public static string[] LoadConfig()

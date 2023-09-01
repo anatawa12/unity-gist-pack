@@ -19,7 +19,17 @@
     {
       "id": "4476430cfcc2ccef4bc40341d20001cf",
       "name": "Fake DynamicBone Components",
-      "description": "Fake DynamicBone Component to make DB -> PB Converter in VRChat SDK works."
+      "description": "Fake DynamicBone Component to make DB -> PB Converter in VRChat SDK works.",
+      "guids": [
+        {
+          "disabled": "5a47a348448e4ba99265c3a85359f1a3",
+          "enabled": "f9ac8d30c6a0d9642a11e5be4c440740"
+        },
+        {
+          "disabled": "2cfd3a7598304b2fbf6ec849d27596f5",
+          "enabled": "baedd976e12657241bf7ff2d1c685342"
+        }
+      ]
     },
     {
       "id": "a4bb4e2e5d75b4fa5ba42e236aae564d",
