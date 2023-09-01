@@ -9,7 +9,9 @@
       "id": "def5f8a29179ecbcb45502fa3b4590ce",
       "name": "CreateAssemblyDefinitionForUdonSharp",
       "description": "Adds menu to create assembly definition with U# assembly definition",
-      "constraints": ["UDON_SHARP"]
+      "constraints": [
+        "UDON_SHARP"
+      ]
     },
     {
       "id": "e825ec4ee39ae29b64fdcc2f3f07a58c",
@@ -22,12 +24,12 @@
       "description": "Fake DynamicBone Component to make DB -> PB Converter in VRChat SDK works.",
       "guids": [
         {
-          "disabled": "5a47a348448e4ba99265c3a85359f1a3",
-          "enabled": "f9ac8d30c6a0d9642a11e5be4c440740"
+          "enabled": "f9ac8d30c6a0d9642a11e5be4c440740",
+          "disabled": "5a47a348448e4ba99265c3a85359f1a3"
         },
         {
-          "disabled": "2cfd3a7598304b2fbf6ec849d27596f5",
-          "enabled": "baedd976e12657241bf7ff2d1c685342"
+          "enabled": "baedd976e12657241bf7ff2d1c685342",
+          "disabled": "2cfd3a7598304b2fbf6ec849d27596f5"
         }
       ]
     },
@@ -35,13 +37,17 @@
       "id": "a4bb4e2e5d75b4fa5ba42e236aae564d",
       "name": "ActualPerformanceWindow",
       "description": "A window to see actual performance rank on building avatars",
-      "constraints": ["VRCSDK_AVATARS"]
+      "constraints": [
+        "VRCSDK_AVATARS"
+      ]
     },
     {
       "id": "379c4d828c2a0add4d623f8668209cbc",
       "name": "PhysBoneEditorUtilities",
       "description": "Set of utilities for PhysBone",
-      "constraints": ["VRCSDK_AVATARS"]
+      "constraints": [
+        "VRCSDK_AVATARS"
+      ]
     },
     {
       "id": "4c900d5c15050fb5bdc0f9d027962183",
@@ -57,13 +63,17 @@
       "id": "581b66619711eaf5ebacbd85369d62e6",
       "name": "SetRandomBlueprintId",
       "description": "Set blueprint id without build",
-      "constraints": ["VRCSDK_BASE"]
+      "constraints": [
+        "VRCSDK_BASE"
+      ]
     },
     {
       "id": "5f847a1692fb30c2c9f00a47d50243ad",
       "name": "AndroidOnlyCheck",
       "description": "A VRCSDKPreprocessAvatarCallback which prevents PC builds.",
-      "constraints": ["VRCSDK_AVATARS"]
+      "constraints": [
+        "VRCSDK_AVATARS"
+      ]
     },
     {
       "id": "f7476d2d727bc43d86121f6a3337d2c3",
