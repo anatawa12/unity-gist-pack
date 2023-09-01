@@ -22,7 +22,7 @@ namespace anatawa12.gists.selector
                 jsonInfo.id ?? throw new ArgumentException("id is null"),
                 jsonInfo.name ?? throw new ArgumentException("name is null"),
                 jsonInfo.description ?? throw new ArgumentException("description is null"),
-                ConvertDefines(jsonInfo.constraints)
+                ConvertDefines(jsonInfo.constraints ?? Array.Empty<string>())
             );
 
         private static Define ConvertDefines(string[] jsonInfoConstraints) => jsonInfoConstraints.Aggregate(Define.None,

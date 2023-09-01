@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 
@@ -26,34 +27,51 @@ namespace anatawa12.gists.selector
             }
             else
             {
-                UpdateAsmdef(LoadConfig());
+                SyncWithSettings(LoadConfig());
             }
         }
 
-        public static void UpdateAsmdef(string[] gists)
+        public static void SyncWithSettings(string[] gists)
+        {
+            var config = ParseConfig(gists);
+            SyncAsmdef(config);
+        }
+
+        private static HashSet<string> ParseConfig(string[] gists)
+        {
+            var set = new HashSet<string>();
+
+            foreach (var configPackage in gists)
+            {
+                if (string.IsNullOrEmpty(configPackage)) continue;
+                var id = configPackage.Split(new[] { ':' }, 2);
+                var name = id.Length == 2 ? id[1] : null;
+                if (string.IsNullOrWhiteSpace(name)) name = null;
+                var guid = id[0];
+
+                if (GistsById.ContainsKey(guid))
+                    set.Add(guid);
+                else
+                    Debug.LogWarning($"Gist with id {guid} ({(name ?? "unknown")}) not found");
+            }
+
+            return set;
+        }
+
+        private static void SyncAsmdef(HashSet<string> config)
         {
             var defines = new List<string>();
 
-            void TryAddGist(in GistInfo info)
+            foreach (var info in config.Select(guid => GistsById[guid]))
             {
                 if (!Defines.IsActive(info.DependencyConstants))
                 {
                     Debug.LogWarning(
                         $"Gist with id {info.ID} ({info.Name}) is not valid due to some missing dependencies");
-                    return;
+                    continue;
                 }
 
                 defines.Add($"GIST_{info.ID}");
-            }
-
-            foreach (var configPackage in gists)
-            {
-                if (string.IsNullOrEmpty(configPackage)) continue;
-                var id = configPackage.Split(new[] {':'}, 2);
-                if (GistsById.TryGetValue(id[0], out var info))
-                    TryAddGist(info);
-                else
-                    Debug.LogWarning($"Gist with id {id[0]} ({(id.Length == 2 ? id[1] : "unknown")}) not found");
             }
 
             var asmdefPath = AssetDatabase.GUIDToAssetPath(ScriptsAsmdefGuid);
@@ -83,7 +101,7 @@ namespace anatawa12.gists.selector
             asmdef.versionDefines.AddRange(defines.Select(define => new VersionDefine("Unity", "", define)));
 
             File.WriteAllText(asmdefPath, JsonUtility.ToJson(asmdef, true));
-            AssetDatabase.Refresh();
+            AssetDatabase.ImportAsset(asmdefPath);
         }
 
         public static string[] LoadConfig()

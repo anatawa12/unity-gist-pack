@@ -90,14 +90,14 @@ namespace anatawa12.gists.selector
                 if (Selector.GistsById.TryGetValue(list[i], out var info))
                     list[i] = list[i] + ":" + info.Name;
             var array = list.ToArray();
-            Selector.UpdateAsmdef(array);
+            Selector.SyncWithSettings(array);
             Selector.SaveConfig(array);
         }
 
         private void LoadConfig()
         {
             var config = Selector.LoadConfig();
-            Selector.UpdateAsmdef(config);
+            Selector.SyncWithSettings(config);
             _guids = new HashSet<string>(config.Select(x => x.Split(':')[0]));
         }
 
