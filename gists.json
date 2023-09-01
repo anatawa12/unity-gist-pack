@@ -124,6 +124,11 @@
       "id": "6af2d5e41b0941aee1ed3fd7e0860ac0",
       "name": "MultiGizmo",
       "description": "Align X axis of multiple GameObjects onto plane of the gameobjects. This is made to align rotation of skirt bone."
+    },
+    {
+      "id": "667a1b7a892f121a7572bdec325442ea",
+      "name": "Create Idle Animation",
+      "description": "Creates Idle face animation from SkinnedMeshRenderer"
     }
   ]
 }

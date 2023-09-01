@@ -61,3 +61,6 @@
 [submodule "Scripts/6af2d5e41b0941aee1ed3fd7e0860ac0"]
 	path = Scripts/MultiGizmo
 	url = https://gist.github.com/anatawa12/6af2d5e41b0941aee1ed3fd7e0860ac0.git
+[submodule "Scripts/667a1b7a892f121a7572bdec325442ea"]
+	path = Scripts/CreateIdleAnimation
+	url = https://gist.github.com/anatawa12/667a1b7a892f121a7572bdec325442ea.git
