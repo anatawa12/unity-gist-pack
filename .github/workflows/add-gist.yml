@@ -1,0 +1,97 @@
+name: Add Gist
+
+on:
+  workflow_dispatch:
+    inputs:
+      guid:
+        description: "GUID of the gist"
+        type: string
+        required: true
+      folder:
+        description: "Name of Folder"
+        type: string
+        required: true
+      name:
+        description: "Show name of the Gist"
+        type: string
+        required: true
+      description:
+        description: "Description of Gist"
+        type: string
+        required: true
+      constraints:
+        description: "Required Constraints for the Gist. ';' separated"
+        type: string
+        required: true
+      replacing-guids:
+        description: "Replacing GUIDs for the Gist. 'original:replaced' ';' separated"
+        type: string
+        required: true
+
+env:
+  PKG_NAME: com.anatawa12.gists
+
+permissions: write-all
+
+jobs:
+  add-gist:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ env.VERSION }}
+      release_note: Add ${{ env.GIST_NAME }}
+    env:
+      GIST_GUID: ${{ inputs.guid }}
+      FOLDER_NAME: ${{ inputs.folder }}
+      GIST_NAME: ${{ inputs.name }}
+      DESCRIPTION: ${{ inputs.description }}
+      CONSTRAINTS: ${{ inputs.constraints }}
+      REPLACE_GUIDS: ${{ inputs.replacing-guids }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - run: git config --global user.name 'github-actions[bot]'
+      - run: git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Add Gist Git Repository
+        working-directory: Scripts
+        run: ./add-gist.sh "$GIST_GUID" "$FOLDER_NAME"
+
+      - name: Update gists.json
+        run: |
+          mv gists.json gists.json.bak
+          jq <gists.json.bak >gists.json \
+            --arg GIST_GUID "$GIST_GUID" \
+            --arg GIST_NAME "$GIST_NAME" \
+            --arg DESCRIPTION "$DESCRIPTION" \
+            --arg CONSTRAINTS "$CONSTRAINTS" \
+            --arg REPLACE_GUIDS "$REPLACE_GUIDS" \
+            '.gists += [
+              {
+               id: $GIST_GUID,
+               name: $GIST_NAME,
+               description: $DESCRIPTION,
+              }
+              | .constraints = ($CONSTRAINTS | split(";"))
+              | .guids = [($REPLACE_GUIDS | split(";") | .[] | {enabled: (.|split(":")|.[0]), disabled: (.|split(":")|.[1])})]
+              | (if .constraints == [] then del(.constraints) else . end)
+              | (if .guids == [] then del(.guids) else . end)
+            ]'
+          rm gists.json.bak
+          git add gists.json
+
+      - name: Commit
+        run: git commit -m "add $GIST_NAME"
+
+      - name: Set Next Version
+        run: ./.github/set-minor-release.sh
+
+  build-publish-release:
+    uses: ./.github/workflows/build-publish-release.yml
+    needs: add-gist
+    with:
+      version: ${{ needs.add-gist.outputs.version }}
+      release-note: ${{ needs.add-gist.outputs.release-note }}
+    secrets:
+      VPM_GITHUB_PAT: ${{ secrets.VPM_GITHUB_PAT }}

@@ -58,6 +58,9 @@ jobs:
       - name: Prepare build folder
         run: mkdir build
 
+      - name: Fix GUIDs for release
+        run: ./.github/fix-guids.sh
+
       - name: Build VPM release
         run: |
           zip -r "build/$PKG_NAME-$VERSION.zip" . -x 'build*' '.*'

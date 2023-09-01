@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eu
+
 git submodule add --name "Scripts/$1" "https://gist.github.com/anatawa12/$1.git" "$2"
 
 cat << HEREDOC > "$2.meta"
