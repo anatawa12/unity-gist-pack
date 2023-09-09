@@ -131,6 +131,8 @@ namespace anatawa12.gists.selector
             {
                 var path = AssetDatabase.GUIDToAssetPath(replaceFrom);
                 if (string.IsNullOrEmpty(path)) return; // replace from not found: already replace to
+                // The package we found is not gist
+                if (!path.Contains("com.anatawa12.gists")) return;
                 var actualGuid = AssetDatabase.AssetPathToGUID(path);
                 if (actualGuid != replaceFrom) return;
 
