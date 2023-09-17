@@ -30,6 +30,11 @@
             "name": "com.vrchat.udonsharp",
             "expression": "",
             "define": "UDON_SHARP"
+        },
+        {
+            "name": "com.vrchat.worlds",
+            "expression": "[3.4.0,4.0.0)",
+            "define": "UDON_SHARP"
         }
     ],
     "noEngineReferences": false
