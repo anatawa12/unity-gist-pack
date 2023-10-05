@@ -6,7 +6,8 @@ You can select any of gist to be enabled at `Tools/anatawa12's gist selector`.
 
 ## Installation
 
-As a upm package, you may use `https://github.com/anatawa12/unity-gist-pack.git`.
+As a upm package, you can clone `https://github.com/anatawa12/unity-gist-pack.git` as submodule into `Packages` folder.
+Because this package depends on modifiability of embedded packages, you cannot use this as git upm package.
 
 As a vpm package, you can add `https://vpm.anatawa12.com/vpm.json` to your vpm repos & add `com.anatawa12.gists`
 
