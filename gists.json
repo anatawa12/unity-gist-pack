@@ -129,6 +129,11 @@
       "id": "667a1b7a892f121a7572bdec325442ea",
       "name": "Create Idle Animation",
       "description": "Creates Idle face animation from SkinnedMeshRenderer"
+    },
+    {
+      "id": "8af588d3fc832910d5675566303002b5",
+      "name": "Object Full Debug Inspector",
+      "description": "Object Full Debug Inspector (similar to internal debug inspector)"
     }
   ]
 }
