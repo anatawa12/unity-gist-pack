@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 generate() {
   local GIST_HASH="$1"
