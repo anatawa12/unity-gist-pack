@@ -134,6 +134,11 @@
       "id": "8af588d3fc832910d5675566303002b5",
       "name": "Object Full Debug Inspector",
       "description": "Object Full Debug Inspector (similar to internal debug inspector)"
+    },
+    {
+      "id": "b128ca8fc819b9684f3ed15be1f76e8c",
+      "name": "Show Assets in Packages by Default in Selector Window",
+      "description": "In Unity, the selector window will not show assets in packages by default. This tool will change the default behavior to show assets in packages by default."
     }
   ]
 }

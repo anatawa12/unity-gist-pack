@@ -67,3 +67,6 @@
 [submodule "Scripts/8af588d3fc832910d5675566303002b5"]
 	path = Scripts/ObjectFullDebugInspector
 	url = https://gist.github.com/anatawa12/8af588d3fc832910d5675566303002b5.git
+[submodule "Scripts/b128ca8fc819b9684f3ed15be1f76e8c"]
+	path = Scripts/ShowAssetsInPackagesByDefaultInSelector
+	url = https://gist.github.com/anatawa12/b128ca8fc819b9684f3ed15be1f76e8c.git
