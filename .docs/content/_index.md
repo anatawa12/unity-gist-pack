@@ -3,7 +3,7 @@ title: Introduction
 type: docs
 ---
 
-# anatawa12's gist pack for Unity Gist Pack
+# anatawa12's gist pack for Unity
 
 Set of anatawa12's gists for Unity.
 With this pack, you can upgrade gists using VPM.
