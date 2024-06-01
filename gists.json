@@ -139,6 +139,11 @@
       "id": "b128ca8fc819b9684f3ed15be1f76e8c",
       "name": "Show Assets in Packages by Default in Selector Window",
       "description": "In Unity, the selector window will not show assets in packages by default. This tool will change the default behavior to show assets in packages by default."
+    },
+    {
+      "id": "f52ad0643f7db137a99d207428f44dc6",
+      "name": "ExportTextureAsPNG",
+      "description": " Save existing texture asset as PNG "
     }
   ]
 }

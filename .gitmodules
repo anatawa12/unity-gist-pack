@@ -70,3 +70,6 @@
 [submodule "Scripts/b128ca8fc819b9684f3ed15be1f76e8c"]
 	path = Scripts/ShowAssetsInPackagesByDefaultInSelector
 	url = https://gist.github.com/anatawa12/b128ca8fc819b9684f3ed15be1f76e8c.git
+[submodule "Scripts/f52ad0643f7db137a99d207428f44dc6"]
+	path = Scripts/ExportTextureAsPNG
+	url = https://gist.github.com/anatawa12/f52ad0643f7db137a99d207428f44dc6.git
