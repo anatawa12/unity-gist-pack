@@ -73,3 +73,6 @@
 [submodule "Scripts/f52ad0643f7db137a99d207428f44dc6"]
 	path = Scripts/ExportTextureAsPNG
 	url = https://gist.github.com/anatawa12/f52ad0643f7db137a99d207428f44dc6.git
+[submodule "Scripts/9e2bf687b1dbc23c78d513bfa96f07d8"]
+	path = Scripts/ManualBakePreprocessAvatarCallbacks
+	url = https://gist.github.com/anatawa12/9e2bf687b1dbc23c78d513bfa96f07d8.git

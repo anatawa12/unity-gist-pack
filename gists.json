@@ -144,6 +144,14 @@
       "id": "f52ad0643f7db137a99d207428f44dc6",
       "name": "ExportTextureAsPNG",
       "description": " Save existing texture asset as PNG "
+    },
+    {
+      "id": "9e2bf687b1dbc23c78d513bfa96f07d8",
+      "name": "Manual Bake Preprocess Avatar Callbacks ",
+      "description": "Left-click on an Avatar in the Hierarchy and select \"Manual Bake Preprocess Avatar Callbacks\" from the context menu.",
+      "constraints": [
+        "VRCSDK_AVATARS"
+      ]
     }
   ]
 }
