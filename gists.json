@@ -152,6 +152,11 @@
       "constraints": [
         "VRCSDK_AVATARS"
       ]
+    },
+    {
+      "id": "1b304b398945ec547912239328708b6b",
+      "name": "Combine Assets To Single File",
+      "description": "Combines multiple assets into a single file. Select Multiple Files and Right Click -> Assets -> Combine Assets To Single File"
     }
   ]
 }

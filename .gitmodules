@@ -76,3 +76,6 @@
 [submodule "Scripts/9e2bf687b1dbc23c78d513bfa96f07d8"]
 	path = Scripts/ManualBakePreprocessAvatarCallbacks
 	url = https://gist.github.com/anatawa12/9e2bf687b1dbc23c78d513bfa96f07d8.git
+[submodule "Scripts/1b304b398945ec547912239328708b6b"]
+	path = Scripts/CombineAssetsToSingleFile
+	url = https://gist.github.com/anatawa12/1b304b398945ec547912239328708b6b.git
