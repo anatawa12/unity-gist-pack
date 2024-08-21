@@ -157,6 +157,14 @@
       "id": "1b304b398945ec547912239328708b6b",
       "name": "Combine Assets To Single File",
       "description": "Combines multiple assets into a single file. Select Multiple Files and Right Click -> Assets -> Combine Assets To Single File"
+    },
+    {
+      "id": "2acd16939ef597895d8298ae97ba4122",
+      "name": "Create Empty VRChat Avatar",
+      "description": "Fast way to create a new empty VRChat avatar for testing",
+      "constraints": [
+        "VRCSDK_AVATARS"
+      ]
     }
   ]
 }

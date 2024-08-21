@@ -79,3 +79,6 @@
 [submodule "Scripts/1b304b398945ec547912239328708b6b"]
 	path = Scripts/CombineAssetsToSingleFile
 	url = https://gist.github.com/anatawa12/1b304b398945ec547912239328708b6b.git
+[submodule "Scripts/2acd16939ef597895d8298ae97ba4122"]
+	path = Scripts/CreateEmptyVRChatAvatar
+	url = https://gist.github.com/anatawa12/2acd16939ef597895d8298ae97ba4122.git
