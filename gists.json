@@ -165,6 +165,11 @@
       "constraints": [
         "VRCSDK_AVATARS"
       ]
+    },
+    {
+      "id": "9d6d69fdb042d636cc640f85ce0c5fae",
+      "name": "Remove Unused Animator Parameters",
+      "description": "Simple tool to remove unused animator parameter from animator controller"
     }
   ]
 }

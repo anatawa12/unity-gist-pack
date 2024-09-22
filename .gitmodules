@@ -82,3 +82,6 @@
 [submodule "Scripts/2acd16939ef597895d8298ae97ba4122"]
 	path = Scripts/CreateEmptyVRChatAvatar
 	url = https://gist.github.com/anatawa12/2acd16939ef597895d8298ae97ba4122.git
+[submodule "Scripts/9d6d69fdb042d636cc640f85ce0c5fae"]
+	path = Scripts/RemoveUnusedAnimatorParameters
+	url = https://gist.github.com/anatawa12/9d6d69fdb042d636cc640f85ce0c5fae.git
