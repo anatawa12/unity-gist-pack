@@ -85,3 +85,6 @@
 [submodule "Scripts/9d6d69fdb042d636cc640f85ce0c5fae"]
 	path = Scripts/RemoveUnusedAnimatorParameters
 	url = https://gist.github.com/anatawa12/9d6d69fdb042d636cc640f85ce0c5fae.git
+[submodule "Scripts/10b3ac3b4e7f6603e5ca5a91e50fe2b7"]
+	path = Scripts/BakeOverrideController
+	url = https://gist.github.com/anatawa12/10b3ac3b4e7f6603e5ca5a91e50fe2b7.git

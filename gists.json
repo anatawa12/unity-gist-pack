@@ -170,6 +170,11 @@
       "id": "9d6d69fdb042d636cc640f85ce0c5fae",
       "name": "Remove Unused Animator Parameters",
       "description": "Simple tool to remove unused animator parameter from animator controller"
+    },
+    {
+      "id": "10b3ac3b4e7f6603e5ca5a91e50fe2b7",
+      "name": "Bake Override Controller",
+      "description": "The tool to bake Animator Override Controller to Animator Controller."
     }
   ]
 }
