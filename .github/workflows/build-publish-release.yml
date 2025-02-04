@@ -68,7 +68,7 @@ jobs:
         run: |
           zip -r "build/$PKG_NAME-$VERSION.zip" . -x 'build*' '.*'
       - name: Upload VPM release
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: vpm-package
           path: build/${{ env.PKG_NAME }}-${{ env.VERSION }}.zip
@@ -84,7 +84,7 @@ jobs:
       - name: zip docs
         run: cd .docs/public && zip ../../build/website.zip -r .
       - name: Upload docs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: website
           path: .docs/public
