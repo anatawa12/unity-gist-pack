@@ -175,6 +175,11 @@
       "id": "10b3ac3b4e7f6603e5ca5a91e50fe2b7",
       "name": "Bake Override Controller",
       "description": "The tool to bake Animator Override Controller to Animator Controller."
+    },
+    {
+      "id": "70a50d924fe018716761741780893b3a",
+      "name": "Selection History",
+      "description": "This is a tool to back / forward history with mouse button 4, 5."
     }
   ]
 }

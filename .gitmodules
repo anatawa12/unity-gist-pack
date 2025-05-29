@@ -88,3 +88,6 @@
 [submodule "Scripts/10b3ac3b4e7f6603e5ca5a91e50fe2b7"]
 	path = Scripts/BakeOverrideController
 	url = https://gist.github.com/anatawa12/10b3ac3b4e7f6603e5ca5a91e50fe2b7.git
+[submodule "Scripts/70a50d924fe018716761741780893b3a"]
+	path = Scripts/SelectionHistory
+	url = https://gist.github.com/anatawa12/70a50d924fe018716761741780893b3a.git
