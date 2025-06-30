@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
@@ -8,17 +9,26 @@ namespace anatawa12.gists.selector
 {
     class SelectorWindow : EditorWindow, ISerializationCallbackReceiver
     {
+        private static Regex _spaceRegex = new Regex(@"\s+");
         private HashSet<string> _guids = new HashSet<string>();
+        [SerializeField] private string searchString = "";
         [SerializeField] private Vector2 scroll;
         [SerializeField] private bool dirty;
         [SerializeField] private string[] guidsSerialized;
 
         private void OnGUI()
         {
+            searchString = EditorGUILayout.TextField("Search", searchString);
+            var keywords = _spaceRegex.Split(searchString);
             scroll = EditorGUILayout.BeginScrollView(scroll);
             var guiContent = new GUIContent();
             foreach (var gistInfo in Selector.Gists)
             {
+                if (!keywords.All(keyword =>
+                        gistInfo.Name.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0 
+                        || gistInfo.Description.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0
+                        || gistInfo.ID.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0))
+                    continue;
                 guiContent.text = $"{gistInfo.Name}";
                 guiContent.tooltip = gistInfo.Description;
                 var disabled = !Defines.IsActive(gistInfo.DependencyConstants);
