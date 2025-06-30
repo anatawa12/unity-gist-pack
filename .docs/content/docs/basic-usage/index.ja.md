@@ -9,6 +9,8 @@ anatawa12's gist pack for Unityは複数のgistで構成されるため、イン
 
 選択ツールを`Tools/anatawa12's gist selector`から開いて、有効にしたいgistにチェックを入れ、`Apply Changes`をクリックしてください。
 
+一番上の `Search` フィールドを使うと、名前や説明でフィルタリングできます。
+
 依存関係がないパッケージは有効化できません。
 
 例えば、SetRandomBlueprintIdはVRCSDK Base向けに作られているため、もしVRCSDK Baseがプロジェクトにないと無効化されています。\
