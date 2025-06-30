@@ -77,6 +77,9 @@ jobs:
       - name: Update .docs/config.toml
         run: sed -i'.bak' -e "s/(SNAPSHOT)/($VERSION)/" .docs/config.toml && rm .docs/config.toml.bak
 
+      - name: Generate docs for undocumented gists
+        run: ./.github/generate-docs.sh
+
       - name: Build docs as a beta docs
         working-directory: .docs
         run: hugo --minify
