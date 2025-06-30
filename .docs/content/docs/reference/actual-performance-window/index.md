@@ -17,7 +17,13 @@ If you have multiple avatars in your scene, You can select avatar to see perform
 This performance rank shown in this window is calculated by VRCSDK,
 however it may not be same as VRChat Client because of VRChat's changes.
 
+## How to add this tool to your project {#how-to-add-to-project}
+
+Enable 'AlignXAxisOnPlaneWithYRotation' in the selector window. Please refer [Basic Usage] page for more details.
+
 ![window image](window.png)
 
 [Avatar Optimizer]: https://vpm.anatawa12.com/avatar-optimizer/en/
 [Modular Avatar]: https://modular-avatar.nadena.dev/
+
+[Basic Usage]: /gists/ja/docs/basic-usage/

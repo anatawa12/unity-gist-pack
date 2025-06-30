@@ -14,7 +14,13 @@ Actual Performance WindowはPlay Modeやbuild時のアバターのPerformance Ra
 
 表示されるパフォーマンスランクはVRCSDKによって計算されますが、VRChatの変更によりVRChat Clientで表示されるものと違う場合があります。
 
+## このツールをプロジェクトに追加する方法 {#how-to-add-to-project}
+
+セレクタウィンドウで「AlignXAxisOnPlaneWithYRotation」を有効にします。詳細については、[Basic Usage]ページを参照してください。
+
 ![window image](window.png)
 
 [Avatar Optimizer]: https://vpm.anatawa12.com/avatar-optimizer/ja/
 [Modular Avatar]: https://modular-avatar.nadena.dev/ja/
+
+[Basic Usage]: /gists/ja/docs/basic-usage/

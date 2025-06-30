@@ -5,7 +5,7 @@ weight: 1
 
 # Basic Usage
 
-anatawa12's gist pack for Unityは複数のgistで構成されるため、インストール後にいくつかのgistを有効化する必要があります。
+anatawa12's gist pack for Unityは複数のgistで構成されるため、インストール後に使用にしたいgistを有効化する必要があります。
 
 選択ツールを`Tools/anatawa12's gist selector`から開いて、有効にしたいgistにチェックを入れ、`Apply Changes`をクリックしてください。
 
