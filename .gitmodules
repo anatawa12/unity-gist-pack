@@ -91,3 +91,6 @@
 [submodule "Scripts/70a50d924fe018716761741780893b3a"]
 	path = Scripts/SelectionHistory
 	url = https://gist.github.com/anatawa12/70a50d924fe018716761741780893b3a.git
+[submodule "Scripts/fc3376768f6f3c2f9e7c8e60596ad99f"]
+	path = Scripts/ProfileSwitcher
+	url = https://gist.github.com/anatawa12/fc3376768f6f3c2f9e7c8e60596ad99f.git

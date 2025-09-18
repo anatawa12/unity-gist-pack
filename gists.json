@@ -180,6 +180,14 @@
       "id": "70a50d924fe018716761741780893b3a",
       "name": "Selection History",
       "description": "This is a tool to back / forward history with mouse button 4, 5."
+    },
+    {
+      "id": "fc3376768f6f3c2f9e7c8e60596ad99f",
+      "name": "Profile Switcher",
+      "description": "A script to switch VRChat account profile in the Unity Editor.",
+      "constraints": [
+        "VRCSDK_BASE"
+      ]
     }
   ]
 }
