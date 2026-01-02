@@ -103,3 +103,6 @@
 [submodule "Scripts/96f14582df903936986b786b9210b4dd"]
 	path = Scripts/ObjectRecursiveDiff
 	url = https://gist.github.com/anatawa12/96f14582df903936986b786b9210b4dd.git
+[submodule "Scripts/3448b46d43b9f89ac22be985bf9c3c21"]
+	path = Scripts/ CopyClothSettingsByDistance
+	url = https://gist.github.com/anatawa12/3448b46d43b9f89ac22be985bf9c3c21.git
