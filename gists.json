@@ -188,6 +188,14 @@
       "constraints": [
         "VRCSDK_BASE"
       ]
+    },
+    {
+      "id": "b577547d96eea6975279dee2a7e59578",
+      "name": "BlendShapeSync Generator",
+      "description": "Simple window to generate Modular Avatar's Blendshape Sync components",
+      "constraints": [
+        "MODULAR_AVATAR"
+      ]
     }
   ]
 }

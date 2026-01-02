@@ -94,3 +94,6 @@
 [submodule "Scripts/fc3376768f6f3c2f9e7c8e60596ad99f"]
 	path = Scripts/ProfileSwitcher
 	url = https://gist.github.com/anatawa12/fc3376768f6f3c2f9e7c8e60596ad99f.git
+[submodule "Scripts/b577547d96eea6975279dee2a7e59578"]
+	path = Scripts/BlendShapeSyncGenerator
+	url = https://gist.github.com/anatawa12/b577547d96eea6975279dee2a7e59578.git
