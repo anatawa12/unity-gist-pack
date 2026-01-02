@@ -55,29 +55,6 @@ jobs:
       - name: Add Gist Git Repository
         run: ./.add-gist.sh "$GIST_GUID" "$FOLDER_NAME" "$GIST_NAME" "$DESCRIPTION" "$CONSTRAINTS" "$REPLACE_GUIDS"
 
-      - name: Update gists.json
-        run: |
-          mv gists.json gists.json.bak
-          jq <gists.json.bak >gists.json \
-            --arg GIST_GUID "$GIST_GUID" \
-            --arg GIST_NAME "$GIST_NAME" \
-            --arg DESCRIPTION "$DESCRIPTION" \
-            --arg CONSTRAINTS "$CONSTRAINTS" \
-            --arg REPLACE_GUIDS "$REPLACE_GUIDS" \
-            '.gists += [
-              {
-               id: $GIST_GUID,
-               name: $GIST_NAME,
-               description: $DESCRIPTION,
-              }
-              | .constraints = ($CONSTRAINTS | split(";"))
-              | .guids = [($REPLACE_GUIDS | split(";") | .[] | {enabled: (.|split(":")|.[0]), disabled: (.|split(":")|.[1])})]
-              | (if .constraints == [] then del(.constraints) else . end)
-              | (if .guids == [] then del(.guids) else . end)
-            ]'
-          rm gists.json.bak
-          git add gists.json
-
       - name: Commit
         run: git commit -m "add $GIST_NAME" && git push
 

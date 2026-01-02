@@ -206,19 +206,6 @@
       ]
     },
     {
-      "id": "e4b346a295d44476763814a7cad6bfd9",
-      "name": "Update AnimationHashSet Processor",
-      "description": "A IVRCSDKPreprocessAvatarCallback to update animation hashset of VRCAvatarDescriptor.",
-      "constraints": [
-        "VRCSDK_AVATARS"
-      ]
-    },
-    {
-      "id": "96f14582df903936986b786b9210b4dd",
-      "name": "ObjectRecursiveDiff",
-      "description": "Simple utility to show differences between two UnityEngine.Objects recursively"
-    },
-    {
       "id": "96f14582df903936986b786b9210b4dd",
       "name": "ObjectRecursiveDiff",
       "description": "Simple utility to show differences between two UnityEngine.Objects recursively"
