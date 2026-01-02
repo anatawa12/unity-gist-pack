@@ -212,6 +212,16 @@
       "constraints": [
         "VRCSDK_AVATARS"
       ]
+    },
+    {
+      "id": "96f14582df903936986b786b9210b4dd",
+      "name": "ObjectRecursiveDiff",
+      "description": "Simple utility to show differences between two UnityEngine.Objects recursively"
+    },
+    {
+      "id": "96f14582df903936986b786b9210b4dd",
+      "name": "ObjectRecursiveDiff",
+      "description": "Simple utility to show differences between two UnityEngine.Objects recursively"
     }
   ]
 }

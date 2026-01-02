@@ -100,3 +100,6 @@
 [submodule "Scripts/e4b346a295d44476763814a7cad6bfd9"]
 	path = Scripts/UpdateAnimationHashSetProcessor
 	url = https://gist.github.com/anatawa12/e4b346a295d44476763814a7cad6bfd9.git
+[submodule "Scripts/96f14582df903936986b786b9210b4dd"]
+	path = Scripts/ObjectRecursiveDiff
+	url = https://gist.github.com/anatawa12/96f14582df903936986b786b9210b4dd.git
