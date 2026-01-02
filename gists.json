@@ -214,6 +214,11 @@
       "id": "3448b46d43b9f89ac22be985bf9c3c21",
       "name": "Copy Cloth Settings By Distance",
       "description": "Copy cloth settings from source cloth to destination cloth based on distance from a point."
+    },
+    {
+      "id": "c984c98b8676d1893d7d3f79f50c18aa",
+      "name": "Quick Copy Components",
+      "description": "Copy Components from one GameObject to another quickly & bulkily."
     }
   ]
 }

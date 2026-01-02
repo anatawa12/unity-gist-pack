@@ -106,3 +106,6 @@
 [submodule "Scripts/3448b46d43b9f89ac22be985bf9c3c21"]
 	path = Scripts/ CopyClothSettingsByDistance
 	url = https://gist.github.com/anatawa12/3448b46d43b9f89ac22be985bf9c3c21.git
+[submodule "Scripts/c984c98b8676d1893d7d3f79f50c18aa"]
+	path = Scripts/QuickCopyComponents
+	url = https://gist.github.com/anatawa12/c984c98b8676d1893d7d3f79f50c18aa.git
