@@ -97,3 +97,6 @@
 [submodule "Scripts/b577547d96eea6975279dee2a7e59578"]
 	path = Scripts/BlendShapeSyncGenerator
 	url = https://gist.github.com/anatawa12/b577547d96eea6975279dee2a7e59578.git
+[submodule "Scripts/e4b346a295d44476763814a7cad6bfd9"]
+	path = Scripts/UpdateAnimationHashSetProcessor
+	url = https://gist.github.com/anatawa12/e4b346a295d44476763814a7cad6bfd9.git

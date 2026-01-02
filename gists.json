@@ -196,6 +196,22 @@
       "constraints": [
         "MODULAR_AVATAR"
       ]
+    },
+    {
+      "id": "e4b346a295d44476763814a7cad6bfd9",
+      "name": "Update AnimationHashSet Processor",
+      "description": "A IVRCSDKPreprocessAvatarCallback to update animation hashset of VRCAvatarDescriptor.",
+      "constraints": [
+        "VRCSDK_AVATARS"
+      ]
+    },
+    {
+      "id": "e4b346a295d44476763814a7cad6bfd9",
+      "name": "Update AnimationHashSet Processor",
+      "description": "A IVRCSDKPreprocessAvatarCallback to update animation hashset of VRCAvatarDescriptor.",
+      "constraints": [
+        "VRCSDK_AVATARS"
+      ]
     }
   ]
 }
