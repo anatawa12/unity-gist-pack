@@ -14,6 +14,8 @@ namespace anatawa12.gists.selector
         VRCSDK_AVATARS = 1 << 1,
         VRCSDK_BASE = 1 << 2,
         UDON_SHARP = 1 << 3,
+        MODULAR_AVATAR = 1 << 4,
+        NDMF = 1 << 5,
     }
 
     static class Defines
@@ -30,6 +32,12 @@ namespace anatawa12.gists.selector
 #endif
 #if UDON_SHARP
             | Define.UDON_SHARP
+#endif
+#if MODULAR_AVATAR
+            | Define.MODULAR_AVATAR
+#endif
+#if NDMF
+            | Define.NDMF
 #endif
             ;
         public static bool IsActive(Define define) => (Active & define) == define;

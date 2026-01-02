@@ -1,5 +1,6 @@
 {
     "name": "com.anatawa12.gists.selector",
+    "rootNamespace": "",
     "references": [],
     "includePlatforms": [
         "Editor"
@@ -35,8 +36,17 @@
             "name": "com.vrchat.worlds",
             "expression": "[3.4.0,4.0.0)",
             "define": "UDON_SHARP"
+        },
+        {
+            "name": "nadena.dev.modular-avatar",
+            "expression": "",
+            "define": "MODULAR_AVATAR"
+        },
+        {
+            "name": "nadena.dev.ndmf",
+            "expression": "",
+            "define": "NDMF"
         }
     ],
     "noEngineReferences": false
 }
-
