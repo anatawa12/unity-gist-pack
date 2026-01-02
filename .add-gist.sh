@@ -2,7 +2,7 @@
 
 set -eu
 
-if [ "$#" -lt 4 ] || [ "$#" -gt 5 ]; then
+if [ "$#" -lt 4 ] || [ "$#" -gt 6 ]; then
   echo "Usage: $0 GIST_GUID FOLDER_NAME GIST_NAME DESCRIPTION [CONSTRAINTS] [REPLACE_GUIDS]" >&2
   exit 1
 fi
