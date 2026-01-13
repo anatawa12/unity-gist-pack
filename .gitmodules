@@ -109,3 +109,6 @@
 [submodule "Scripts/c984c98b8676d1893d7d3f79f50c18aa"]
 	path = Scripts/QuickCopyComponents
 	url = https://gist.github.com/anatawa12/c984c98b8676d1893d7d3f79f50c18aa.git
+[submodule "Scripts/029f749b527ed0a8d6dc853a5bcf9b94"]
+	path = Scripts/SimpleAvatarUploader
+	url = https://gist.github.com/anatawa12/029f749b527ed0a8d6dc853a5bcf9b94.git

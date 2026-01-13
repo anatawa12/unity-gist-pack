@@ -219,6 +219,14 @@
       "id": "c984c98b8676d1893d7d3f79f50c18aa",
       "name": "Quick Copy Components",
       "description": "Copy Components from one GameObject to another quickly & bulkily."
+    },
+    {
+      "id": "029f749b527ed0a8d6dc853a5bcf9b94",
+      "name": "Simple Avatar Uploader",
+      "description": "A simple script to upload avatars with VRCSDK Public API",
+      "constraints": [
+        "VRCSDK_AVATARS"
+      ]
     }
   ]
 }
