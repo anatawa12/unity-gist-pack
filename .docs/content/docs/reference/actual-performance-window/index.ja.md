@@ -8,6 +8,8 @@ title: "Actual Performance Window"
 
 Actual Performance WindowはPlay Modeやbuild時のアバターのPerformance RankをVRChat Clientを起動せずに見るためのウィンドウです。
 
+[GitHub Gistでソースコードを見る](https://gist.github.com/a4bb4e2e5d75b4fa5ba42e236aae564d)
+
 [Avatar Optimizer]や[Modular Avatar]のようなPlay Modeに入るときに適用される非破壊改変ツールを使っている場合、Play Modeのプレビューのパフォーマンスランクを確認できます。
 
 もし複数のアバターがSceneにある場合には、上部でパフォーマンスランクをみるアバターを選択できます。

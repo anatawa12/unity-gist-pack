@@ -9,6 +9,8 @@ title: "Actual Performance Window"
 Actual Performance Window is a window to see Performance Rank of your Avatar in Play Mode or 
 just after building your avatar without launching your VRChat Client.
 
+[View Source Code on GitHub Gist](https://gist.github.com/a4bb4e2e5d75b4fa5ba42e236aae564d)
+
 If you have some non-destructive avatar modification tools you can preview on entering Play Mode
 such as [Avatar Optimizer] or [Modular Avatar], You can see performance rank in Play Mode preview.
 
