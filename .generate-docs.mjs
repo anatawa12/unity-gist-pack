@@ -163,6 +163,7 @@ function generateMarkdownFile(slug, extractedContent, gistInfo, language = 'en')
     const messages = {
         en: {
             generatedWarning: "This documentation is automatically generated from the comment of the script, or README.md file in the script directory. You might see some formatting issues and heading links might not work in the future.",
+            sourceCodeLink: "View Source Code on GitHub Gist",
             dependencyPackages: "Dependency Packages",
             descriptionAndUsage: "Description and Usage",
             noDependencyPackages: "This tool does not depend on any other packages, can be used in any modern Unity project.",
@@ -172,6 +173,7 @@ function generateMarkdownFile(slug, extractedContent, gistInfo, language = 'en')
         },
         ja: {
             generatedWarning: "このドキュメントは、スクリプトのコメントまたはスクリプトディレクトリ内のREADME.mdファイルから自動的に生成されています。将来、フォーマットの問題や見出しリンクが機能しない可能性があります。また、翻訳が行われていない場合があります。",
+            sourceCodeLink: "GitHub Gistでソースコードを見る",
             dependencyPackages: "依存パッケージ",
             descriptionAndUsage: "説明と使用方法",
             noDependencyPackages: "このツールは他のパッケージに依存していません。最新のUnityプロジェクトで使用できます。",
@@ -200,6 +202,8 @@ title: "${gistDisplayName}"
 # ${gistDisplayName}
 
 ${gistInfo.description}
+
+[${messages[language].sourceCodeLink}](https://gist.github.com/${gistInfo.id})
 
 {{< hint info >}}
 
