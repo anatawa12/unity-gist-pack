@@ -27,3 +27,9 @@ In `0.x.y`, x will be updated when new gist is added. y will be updated when any
 ### When this package will reach 1.0?
 
 A: Never. each gist may make small breaking changes every time so I'll keep this package in 0.x.
+
+## Notes
+
+### Issues are open; but not expected to fix soon
+
+All tools in this package are made only for me but may be usable for others so I distributed as package.
