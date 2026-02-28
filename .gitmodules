@@ -112,3 +112,6 @@
 [submodule "Scripts/029f749b527ed0a8d6dc853a5bcf9b94"]
 	path = Scripts/SimpleAvatarUploader
 	url = https://gist.github.com/anatawa12/029f749b527ed0a8d6dc853a5bcf9b94.git
+[submodule "Scripts/5f0161e7d6286d82687df1b165db74f0"]
+	path = Scripts/UpdateAvatarInfoWindow
+	url = https://gist.github.com/anatawa12/5f0161e7d6286d82687df1b165db74f0.git

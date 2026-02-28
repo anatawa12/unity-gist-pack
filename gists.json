@@ -227,6 +227,14 @@
       "constraints": [
         "VRCSDK_AVATARS"
       ]
+    },
+    {
+      "id": "5f0161e7d6286d82687df1b165db74f0",
+      "name": "Update Avatar Info Window",
+      "description": "A simple Unity Editor window for viewing and updating VRChat avatar information without re-uploading",
+      "constraints": [
+        "VRCSDK_BASE"
+      ]
     }
   ]
 }
